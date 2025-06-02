@@ -45,7 +45,7 @@ public class MinecraftAccount {
     }
 
     public boolean isLocal(){
-        return false;
+        return accessToken.equals("0");
     }
 
     public boolean isDemo(){
