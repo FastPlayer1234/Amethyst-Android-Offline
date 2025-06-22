@@ -1450,7 +1450,8 @@ public final class Tools {
     }
 
     public static boolean isLocalProfile(Context ctx){
-        return false;
+        MinecraftAccount currentProfile = PojavProfile.getCurrentProfileContent(ctx, null);
+        return currentProfile == null || currentProfile.isLocal();
     }
     public static boolean hasOnlineProfile(){
         return true;
